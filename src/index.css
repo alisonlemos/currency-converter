@@ -1,4 +1,12 @@
+@import 'assets/fonts/Roboto/index.css';
+
 :root {
+  --primary: #008B57;
+  --brand-green: #00AB63;
+  --dark-grey: #2E3742;
+  --dark-grey2: #45505E;
+  --medium-grey: #8C9CAD;
+
   font-family: Roboto, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -25,5 +33,4 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  place-items: center;
 }
