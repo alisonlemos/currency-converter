@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    color: #000000;
     display: flex;
     flex-direction: row;
     gap: 2rem;
