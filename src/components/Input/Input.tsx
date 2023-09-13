@@ -8,16 +8,16 @@ export interface InputProps {
     value: string,
     placeholder: string,
     formatStyle?: FormatStyle,
-    onChange: (value: string) => void
+    onChange: (value: string, field: string) => void
 }
 
 export default function Input(props: InputProps) {
-    const { name, title, value, placeholder, formatStyle, onChange, } = props
+    const { name, title, value, placeholder, formatStyle, onChange } = props
     const { maskedValue, onValueChange } = useMask(value, formatStyle)
 
     useEffect(() => {
-        onChange(maskedValue)
-    }, [maskedValue, onChange])
+        onChange(maskedValue, name)
+    }, [maskedValue, name, onChange])
 
     function handleChange(event: ChangeEvent<HTMLInputElement>): void {
         const { target: { value } } = event

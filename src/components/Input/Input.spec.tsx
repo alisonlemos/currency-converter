@@ -53,7 +53,7 @@ describe('Input Component', () => {
 
     expect(onValueChange).toHaveBeenCalled()
     expect(onChangeMock).toHaveBeenCalledTimes(1)
-    expect(onChangeMock).toHaveBeenCalledWith(newValue)
+    expect(onChangeMock).toHaveBeenCalledWith(newValue, "test")
     expect(inputElement).toHaveValue(newValue)
   })
 })
