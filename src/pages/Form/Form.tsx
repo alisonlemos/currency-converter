@@ -22,8 +22,6 @@ export default function Form(props: FormProps) {
     async function handleSubmit(event: FormEvent) {
         event.preventDefault()
         const result = calculateResult(formData, price)
-        console.log(result)
-
         onSubmit({ value: result, formData })
     }
 

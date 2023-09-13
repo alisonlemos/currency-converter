@@ -7,7 +7,6 @@ import { calculateResult } from '@/services/currencyService'
 jest.mock('@/services/currencyService')
 const mockService = calculateResult as jest.MockedFunction<typeof calculateResult>
 
-
 describe('Form Component', () => {
 
     let formProps: FormProps
@@ -20,16 +19,6 @@ describe('Form Component', () => {
             onSubmit
         }
     })
-
-    // it('renders input fields correctly', () => {
-    //     render(<Form {...formProps} />)
-    //     const dollarInput = screen.getByRole('textbox', { name: /taxa do estado/i })
-    //     const taxInput = screen.getByRole('textbox', { name: /dólar/i })
-
-    //     expect(dollarInput).toBeInTheDocument()
-    //     expect(taxInput).toBeInTheDocument()
-    //     expect(screen.getByText("Tipo de Compra")).toBeInTheDocument()
-    // })
 
     it('updates form data when input fields change', async () => {
         const value = '50,00'

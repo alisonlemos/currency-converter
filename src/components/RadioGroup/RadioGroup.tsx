@@ -7,8 +7,6 @@ export default function RadioGroup(props: RadioGroupProps) {
 
     function handleChange(event: ChangeEvent<HTMLInputElement>, name: string): void {
         const { target: { value } } = event
-        console.log('kjkasdjkl')
-
         onChange(value, name)
     }
 
