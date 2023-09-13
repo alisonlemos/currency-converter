@@ -1,4 +1,4 @@
-import { useEffect, ChangeEvent } from "react"
+import { useEffect, ChangeEvent, KeyboardEvent } from "react"
 import { Container, InputField, Label } from "./Input.style"
 import { FormatStyle, useMask } from "@/hooks/useMask"
 
@@ -8,7 +8,7 @@ export interface InputProps {
     value: string,
     placeholder: string,
     formatStyle?: FormatStyle,
-    onChange: (value: string, field: string) => void
+    onChange: (value: string, field: string) => void,
 }
 
 export default function Input(props: InputProps) {
@@ -24,6 +24,14 @@ export default function Input(props: InputProps) {
         onValueChange(value)
     }
 
+    function handleKeyDown(event: KeyboardEvent<HTMLInputElement>): void {
+        if (formatStyle === FormatStyle.PERCENT && event.code === "Backspace") {
+            event.preventDefault()
+            const newValue = value.substring(0, value.length - 2)
+            onValueChange(newValue)
+        }
+    }
+
     return (
         <Container>
             <Label htmlFor={name}>{title}</Label>
@@ -34,6 +42,7 @@ export default function Input(props: InputProps) {
                 placeholder={placeholder}
                 type="text"
                 onChange={handleChange}
+                onKeyDown={handleKeyDown}
             />
         </Container>
     )
