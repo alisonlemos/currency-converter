@@ -16,6 +16,9 @@ export const Description = styled.div`
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    @media (max-width: 400px) {
+        display: none;
+    }
 `
 
 export const Title = styled.span`
@@ -28,4 +31,8 @@ export const SubTitle = styled.span`
     color: var(--medium-grey);
     font-weight: 400;
     font-size: 14px;
+
+    @media (max-width: 700px) {
+        display: none;
+    }
 `

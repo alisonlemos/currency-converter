@@ -29,4 +29,7 @@ export const InputField = styled.input`
     &:focus-visible {
         outline: solid 1px var(--medium-grey);
     }
+    @media (max-width: 400px) {
+        width: 100%;
+    }
 `
