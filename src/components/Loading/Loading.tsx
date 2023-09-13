@@ -2,6 +2,6 @@ import { DualRing } from './Loading.style'
 
 export default function Loading() {
     return (
-        <DualRing />
+        <DualRing data-testid="loading-ring" />
     )
 }
