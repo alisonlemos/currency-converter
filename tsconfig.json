@@ -32,6 +32,7 @@
   "include": [
     "src",
     "jest.setup.ts",
+    "__mocks__",
   ],
   "references": [
     {
