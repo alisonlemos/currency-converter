@@ -1,27 +1,58 @@
-# React + TypeScript + Vite
+# Currency Convertet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta Aplicação realaiza a conversão de valores de dólar para real. Utilizando as definições disponiveis no [link](https://github.com/stone-payments/template-desafio-web/blob/main/README.md).
 
-Currently, two official plugins are available:
+A aplicação tem duas etapas, uma para inserir o valor que se deseja converter e outra para mostrar os valores convertidos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Requisitos Técnicos
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Node >= 16
 
-- Configure the top-level `parserOptions` property like this:
+## Stack utilizada
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+- [react](https://github.com/facebook/react)
+- [vite](https://github.com/vitejs/vite)
+- [typescript](https://github.com/microsoft/TypeScript)
+- [react-query](https://github.com/TanStack/query)
+- [axios](https://github.com/axios/axios)
+- [react-testing-library](https://github.com/testing-library/react-testing-library)
+- [jest](https://github.com/facebook/jest)
+
+## Rodando o projeto
+
+### Instalação
+
+Utilizando node com versão >= 16 instale as dependencias utlizando o comando abaixo
+
+```
+  npm i
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Rodando Localmente
+
+Para rodar localmente utilize o comando abaixo:
+
+```
+  npm run dev
+```
+
+A aplicação iniciará em http://localhost:5173
+
+### Rodando os testes
+
+Para rodar os testes unitarios em modo watch utilize o comando abaixo:
+
+```
+  npm run test
+```
+
+### Gerando o build para produção
+
+Para gerar o build de produção utilize o comando abaixo
+
+```
+npm run build
+```
+
+Os arquivos para build serão gerados na pasta `dist`, agora basta servir os arquivos em um servidor apache de sua preferencia
