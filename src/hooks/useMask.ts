@@ -29,9 +29,10 @@ interface FormatOptions {
 
 export function useMask(initialValue: string, type?: FormatStyle): MaskedResult {
 
-    const [value, setValue] = useState(initialValue)
+    const [value, setValue] = useState(initialValue.replace(/\D/g, ''))
 
     function handleChange(value: string): void {
+
         const digits = value.replace(/\D/g, '')
         setValue(digits)
     }
