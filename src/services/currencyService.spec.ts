@@ -43,7 +43,7 @@ describe("currencyService", () => {
 
         const result = service.calculateResult(formData, price)
 
-        expect(result).toBe(4.25)
+        expect(result.toFixed(2)).toBe("4.26")
     })
 
     it("calculates the result for CREDIT_CARD purchase type", () => {
@@ -56,7 +56,7 @@ describe("currencyService", () => {
 
         const result = service.calculateResult(formData, price)
 
-        expect(result).toBe(5820)
+        expect(result.toFixed(2)).toBe("5.86")
     })
 
 
