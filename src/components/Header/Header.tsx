@@ -1,12 +1,17 @@
 import srcLogo from '@/assets/logo.svg'
-import { Container, Description, Logo, SubTitle, Title } from "./Header.style";
+import { Container, Description, Logo, SubTitle, Title } from "./Header.style"
 
-export default function Header() {
+interface HeaderProps {
+    title?: string
+}
+
+export default function Header(props: HeaderProps) {
+    const { title } = props
     return (
         <Container>
             <Logo src={srcLogo} />
             <Description>
-                <Title>14 de janeiro 2021    |     21:00 UTC</Title>
+                <Title>{title}</Title>
                 <SubTitle>Dados de câmbio disponibilizados pela Morningstar.</SubTitle>
             </Description>
         </Container>
