@@ -15,7 +15,7 @@ export const ButtonElement = styled.button<{ $primary?: boolean; $disabled?: boo
     width: 149px;
     height: 56px;
 
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         justify-content: center;
         gap: 1rem;
         width: 100%;

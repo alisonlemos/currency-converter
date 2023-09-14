@@ -11,6 +11,7 @@ export const Label = styled.label`
     font-weight: 500;
 `
 export const InputField = styled.input`
+    background-color: #fff;
     border-radius: 4px;
     border: 1px solid var(--medium-grey3);
     box-sizing: border-box;
@@ -29,7 +30,7 @@ export const InputField = styled.input`
     &:focus-visible {
         outline: solid 1px var(--medium-grey);
     }
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
         width: 100%;
     }
 `
